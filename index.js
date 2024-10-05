@@ -45,12 +45,6 @@ io.on('connection', function (socket) {
     });
 });
 
-const PORT = process.env.PORT || 3000;
-
-if (process.argv[1].endsWith('index.js')) {
-    app.listen(PORT, () => {
-      console.log(`Servidor corriendo en el puerto ${PORT}`);
-    });
-  }
-
-export default app;
+server.listen(3000, () => {
+    console.log('listening on *:3000');
+});
